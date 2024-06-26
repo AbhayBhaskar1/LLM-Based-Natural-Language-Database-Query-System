@@ -19,7 +19,7 @@ def get_few_shot_db_chain():
     db_user = "root"
     db_password = "root"
     db_host = "localhost"
-    db_name = "atliq_tshirts"
+    db_name = "db_tshirts"
 
     db = SQLDatabase.from_uri(f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}",
                               sample_rows_in_table_info=3)
