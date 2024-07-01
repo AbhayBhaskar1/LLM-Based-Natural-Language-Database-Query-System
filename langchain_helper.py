@@ -32,6 +32,7 @@ def get_few_shot_db_chain():
     def embedding_function(texts):
         return embeddings.embed_documents(texts)
 
+
     vectorstore = Chroma.from_texts(to_vectorize, embedding_function=embedding_function, metadatas=few_shots)
     example_selector = SemanticSimilarityExampleSelector(
         vectorstore=vectorstore,
